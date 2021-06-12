@@ -12,10 +12,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception
 	{
 		auth.inMemoryAuthentication().withUser("burg").password("{noop}burg").roles("USER").and()
-									 .withUser("admin").password("{noop}admin").roles("USER","ADMIN");
-		
+		.withUser("admin").password("{noop}admin").roles("USER","ADMIN");
+
 	}
-	
+
 	/* Authorization : mention which role can access which URL */
 	protected void configure(HttpSecurity http) throws Exception
 	{
